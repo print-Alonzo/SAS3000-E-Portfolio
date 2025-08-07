@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alonzo Andrei G. Rimando | Career Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    :root {
+      --primary: #1F2D3D;
+      --background: #F9FAFB;
+      --card-bg: #FFFFFF;
+      --accent: #007B8A;
+      --text-light: #6B7280;
+      --nav-bg: #FFFFFF;
+      --highlight: #E0F2F1;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--background);
+      color: var(--primary);
+      line-height: 1.7;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    nav {
+      background: var(--nav-bg);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 0.75rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--primary);
+      padding: 0.25rem 0.5rem;
+      border-radius: 8px;
+    }
+    nav a i {
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+    nav a.active, nav a:hover {
+      background-color: var(--accent);
+      color: var(--card-bg);
+    }
+    header {
+      background: var(--card-bg);
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: var(--text-light);
+    }
+    .profile {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      background: #ccc;
+    }
+    main {
+      max-width: 1024px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      gap: 2rem;
+    }
+    section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, opacity 0.45s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      margin-bottom: 1.25rem;
+      border-left: 5px solid var(--accent);
+      padding-left: 1rem;
+    }
+    .resume-entry {
+      margin-bottom: 1.75rem;
+    }
+    .position {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .location-date {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.2rem;
+      margin-bottom: 0.75rem;
+    }
+    .description ul {
+      padding-left: 1.25rem;
+    }
+    .description li {
+      margin-bottom: 0.5rem;
+    }
+    .description strong {
+      color: var(--primary);
+    }
+    @media (max-width: 640px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      nav a {
+        font-size: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <a href="#introduction"><i class="fas fa-user"></i>Intro</a>
+    <a href="#pck"><i class="fas fa-brain"></i>PCK</a>
+    <a href="#work"><i class="fas fa-briefcase"></i>Work</a>
+    <a href="#education"><i class="fas fa-graduation-cap"></i>Edu</a>
+    <a href="#leadership"><i class="fas fa-users"></i>Lead</a>
+    <a href="#skills"><i class="fas fa-star"></i>Skills</a>
+    <a href="#samples"><i class="fas fa-file-alt"></i>Samples</a>
+  </nav>
+
+  <header>
+    <img src="./prof-pic.jpg" alt="Profile Picture" class="profile" />
+    <h1>Alonzo Andrei G. Rimando</h1>
+    <p>BSMS in Computer Science | De La Salle University</p>
+    <p><a href="https://www.linkedin.com/in/alonzo-andrei-rimando-aa8810206" target="_blank" rel="noopener">LinkedIn</a></p>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Self-Introduction</h2>
+      <p>Hi, I’m Alonzo Andrei G. Rimando, a Computer Science student currently taking a BS/MS track at De La Salle University – Manila. I have a strong passion for building software that solves real-world problems, with experience in areas like artificial intelligence, web development, and logic-based systems. Over the past few years, I’ve developed projects such as a Star Classification AI, a Sokoban puzzle solver, and Tafthanan, a student forum for the Taft community. Beyond academics, I’ve taken on leadership roles in organizations like the Lasallian Scholars Society and Toastmasters, where I learned the importance of teamwork, adaptability, and clear communication. These experiences shaped me into someone who’s not only technically capable but also ready to collaborate and lead. As I prepare for my professional career, I’m eager to apply what I’ve learned in a setting where I can continue growing, contributing, and making an impact.</p>
+    </section>
+    
+    <section id="pck">
+      <h2>Reflection on PCK Results</h2>
+      <p>Taking the PCK assessment was an insightful experience that allowed me to better understand my interests, work values, and abilities in relation to my future career. One of my key takeaways was how well my primary interest in Conventional roles and secondary interest in Enterprising roles align with structured yet dynamic environments, such as those in business, technology, and administration. This made me realize that I naturally thrive in organized systems where I can lead initiatives, follow procedures, and contribute meaningfully to projects with clear expectations.</p>
+      <br>
+      <p>The Work Importance Profiler results also revealed a lot about what I truly value in a professional setting. My top work values—Achievement, Recognition, and Relationships—reflect my desire to apply my skills meaningfully, be acknowledged for my contributions, and foster positive connections with others. It helped me see that I’m not only driven by personal success but also by impact and collaboration. This reinforces my goal to pursue a career where I can continuously grow, while being part of a supportive and value-aligned team.</p>
+      <br>
+      <p>The Career Ability Profiler highlighted my strengths in Verbal Ability, Spatial Ability, and Form Perception, while also pointing out areas like Arithmetic Reasoning and Computation where I can still improve. It affirmed my capabilities in areas like technical writing, problem-solving, and visual design—skills I’ve been developing through my software projects and leadership roles. I realized that while I have natural strengths, I must also be intentional in strengthening my weaker areas through practice and continuous learning.</p>
+      <br>
+      <p>Overall, this assessment helped me gain clarity on potential career paths that suit not only my skills but also my personality and values. Careers like software development, data analysis, compliance, and tech-driven project management stood out as strong matches. I now feel more confident in narrowing my focus and taking active steps—such as building my portfolio and seeking relevant internships—to align my career choices with who I am and who I aspire to be.</p></p>
+    </section>
+    
+    <section id="work">
+      <h2>Work Experience</h2>
+      <div class="resume-entry">
+        <div class="location-date">
+          <span class="position">Lasallian Ambassador – Non-First Timer</span>
+          <span>Taft, Manila | May 2024 to Present</span>
+        </div>
+        <div class="description">
+          <ul>
+            <li>Represented DLSU in events such as LPEP, Gawad Lasalyano, campus tours, and ushering duties.</li>
+            <li>First year: Served in the human resource committee—organized team building events, oversaw team dynamics, and hosted multiple workshops.</li>
+            <li>Second year: Joined the Operations and Logistics team, where I gained hands-on experience in efficient logistics management.</li>
+            <li>Learned professionalism, event execution, corporate communication, and sponsor coordination.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section id="education">
+      <h2>Education</h2>
+      <div class="resume-entry">
+        <div class="location-date">
+          <span class="position">De La Salle University – BSMS in Computer Science</span>
+          <span>Expected October 2027</span>
+        </div>
+        <div class="description">
+          <ul>
+            <li>Cumulative GPA: 3.5</li>
+            <li>Consistent First Dean’s Lister (1st Year to Present)</li>
+            <li>Active member and associate in: Lasallian Ambassador and Lasallian Scholars Society</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section id="leadership">
+    <h2>Leadership Experience</h2>
+
+    <div class="resume-entry">
+        <div class="location-date">
+            <span class="position">Lasallian Scholars Society – Assistant Vice President for Activities</span>
+            <span>Taft, Manila | Sept 2024 – Present</span>
+        </div>
+        <div class="description">
+            <ul>
+                <li>Planned and executed university-wide programs and projects.</li>
+                <li>Directed a series of seminar workshops for Lasallian students.</li>
+                <li>Developed strong skills in planning, quality assurance, and scheduling.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="resume-entry">
+        <div class="location-date">
+            <span class="position">TOPS Toastmasters Club – Vice President for Membership</span>
+        <span>Makati, Manila | May 2023 – May 2024</span>
+        </div>
+        <div class="description">
+            <ul>
+                <li>Led recruitment campaigns that significantly increased club membership.</li>
+                <li>Organized public speaking events and training sessions.</li>
+                <li>Strengthened communication, networking, and leadership skills.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="resume-entry">
+        <div class="location-date">
+            <span class="position">Lasallian Ambassador – Non-First Timer for Operations and Logistics</span>
+            <span>Taft, Manila | May 2024 - May 2025</span>
+        </div>
+        <div class="description">
+        <ul>
+            <li>Joined the Operations and Logistics team, gaining hands-on experience in efficient logistics management.</li>
+            <li>Assisted in coordinating event logistics, including venue setup and resource allocation.</li>
+            <li>Improved attention to detail and operational planning under time-sensitive conditions.</li>
+        </ul>
+        </div>
+    </div>
+    </section>
+
+    
+    <section id="skills">
+      <h2>Skills & Interests</h2>
+      <div class="description">
+        <ul>
+          <li><strong>Skills:</strong> Python, Java, JavaScript, HTML/CSS, PROLOG, Figma, Svelte, Adobe Photoshop, Adobe Illustrator, Canva, Public Speaking, Project Planning, Hosting, Team Leadership</li>
+          <li><strong>Interests:</strong> Software Development, Artificial Intelligence, UI/UX Design, Writing, Public Speaking</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section id="samples">
+      <h2>Academic Work Samples</h2>
+      <div class="description">
+        <ul>
+          <li><a href="https://github.com/print-Alonzo/PesoPilot.git" target="_blank" rel="noopener">PesoPilot - Money Manager Mobile Application</a></li>
+          <li><a href="https://github.com/print-Alonzo/LLM-Judge_Systems.git" target="_blank" rel="noopener">LLM English to Filipino Translation Judge</a></li>
+          <li><a href="https://github.com/print-Alonzo/Pharmacy-Management-System.git" target="_blank" rel="noopener">Pharmacy Management System</a></li>
+          <li><a href="https://drive.google.com/file/d/1pwNwk2Dzcksb_zFXT4GMFcXkn7DRP0BW/view?usp=sharing" target="_blank" rel="noopener">Current Thesis Proposal - Optimizing Travel Demand Data Collection: A Data Science Approach to Enhancing Contextual Completeness and Reducing User Burden</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+  
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          const id = entry.target.getAttribute("id");
+          const navItem = document.querySelector(`nav a[href='#${id}']`);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            navLinks.forEach(link => link.classList.remove("active"));
+            if (navItem) navItem.classList.add("active");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Force visible class on load if already in view
+    window.addEventListener('DOMContentLoaded', () => {
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top < window.innerHeight) {
+          section.classList.add('visible');
+        }
+      });
+    });
+    
+  </script>
+</body>
+</html>
